@@ -21,7 +21,7 @@ import Tabs, {Tab} from 'material-ui/Tabs';
 import Icon from 'material-ui/Icon';
 import Checkbox from 'material-ui/Checkbox';
 import Divider from 'material-ui/Divider';
-import DeleteIcon from 'material-ui-icons/delete';
+import DeleteIcon from 'material-ui-icons/Delete';
 import List, {ListItem, ListItemText, ListItemSecondaryAction} from 'material-ui/List';
 
 
