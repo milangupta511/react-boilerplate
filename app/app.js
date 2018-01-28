@@ -15,6 +15,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 import 'sanitize.css/sanitize.css';
+import FontFaceObserver from 'fontfaceobserver'
 
 // Import root app
 import App from 'containers/App';
@@ -89,6 +90,15 @@ if (!window.Intl) {
 } else {
   render(translationMessages);
 }
+
+var font = new FontFaceObserver('Roboto');
+
+font.load().then(function () {
+  console.log('Font is available');
+  document.body.classList.add('fontLoaded');
+}, function () {
+  console.log('Font is not available');
+});
 
 // Install ServiceWorker and AppCache in the end since
 // it's not most important operation and if main code fails,
